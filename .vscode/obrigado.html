@@ -3,23 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Página de agradecimento do portfólio de Deivid Rodrigues.">
-  <title>Obrigado pelo contato</title>
-  <link rel="stylesheet" href="CSS/obrigado.css">
-   </head>
+  <meta name="description" content="Página de confirmação de contato do portfólio de Deivid Rodrigues.">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/Obrigado.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+</head>
 <body>
-  <canvas id="stars-bg"></canvas>
-  <main>
-    <section class="menu-content" aria-label="Mensagem de agradecimento">
-      <h1>Obrigado pelo contato!</h1>
-      <p>Recebi sua mensagem e em breve entrarei em contato com você.</p>
-      <a href="index.html" class="bnt" aria-label="Voltar para o início">Voltar para o início</a>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Deivid Rodrigues. Todos os direitos reservados.</p>
-    <p>Contato: <a href="mailto:davimelgasso7l@icloud.com" aria-label="Enviar e-mail para Deivid">davimelgasso7l@icloud.com</a></p>
-  </footer>
+  <canvas id="stars-bg" aria-hidden="true"></canvas>
+
+  <div class="page-shell thankyou-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html#menu" aria-label="Voltar para o início do portfólio">
+        <span class="brand__name">Deivid</span>
+        <span class="brand__title">Rodrigues</span>
+      </a>
+      <a class="ghost back-home" href="index.html">Voltar ao início</a>
+    </header>
+
+    <main class="thankyou-main">
+      <section class="thanks-card reveal" aria-label="Mensagem de confirmação">
+        <p class="eyebrow">Formulário enviado com sucesso</p>
+        <h1>Obrigado pelo contato!</h1>
+        <p class="thanks-copy">
+          Sua mensagem foi recebida. Vou responder em até 24 horas úteis com o próximo passo para seu projeto.
+        </p>
+
+        <div class="thanks-actions">
+          <a href="index.html#portifolio" class="cta">Ver projetos</a>
+          <a href="mailto:davimelgasso7l@icloud.com" class="ghost">Enviar e-mail direto</a>
+        </div>
+
+        <div class="thanks-highlights">
+          <article>
+            <span class="value">Rápido</span>
+            <p>Retorno em até 24h úteis</p>
+          </article>
+          <article>
+            <span class="value">Claro</span>
+            <p>Resposta objetiva e sem burocracia</p>
+          </article>
+          <article>
+            <span class="value">Prático</span>
+            <p>Alinhamento direto por e-mail</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Deivid Rodrigues. Todos os direitos reservados.</p>
+      <p>Contato: <a href="mailto:davimelgasso7l@icloud.com">davimelgasso7l@icloud.com</a></p>
+    </footer>
+  </div>
+
+  <script src="js/scrollReveal.js"></script>
+  <script src="js/script.js"></script>
   <script src="js/estrelas.js"></script>
 </body>
 </html>
