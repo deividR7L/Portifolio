@@ -26,6 +26,12 @@
   padding: clamp(1.8rem, 4vw, 3rem);
   box-shadow: var(--shadow);
   backdrop-filter: blur(14px);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.thanks-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(93, 240, 255, 0.5);
 }
 
 .thanks-card h1 {
@@ -61,6 +67,12 @@
   border-radius: 1rem;
   background: rgba(15, 19, 36, 0.9);
   border: 1px solid var(--border);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.thanks-highlights article:hover {
+  transform: translateY(-4px);
+  border-color: rgba(93, 240, 255, 0.35);
 }
 
 .thanks-highlights .value {

@@ -4,6 +4,45 @@ function initSite() {
   const nav = document.getElementById('nav');
   const navToggle = document.getElementById('menu-toggle');
   const icon = navToggle ? navToggle.querySelector('i') : null;
+  const gsapRef = window.gsap || null;
+  const navLinks = Array.from(document.querySelectorAll('.nav a[href^="#"]'));
+  const observedSections = [];
+  let lastActiveLink = null;
+  let navIndicator = null;
+
+  function moveNavIndicator(targetLink, instant) {
+    if (!nav || !navIndicator || !targetLink) return;
+    const navRect = nav.getBoundingClientRect();
+    const linkRect = targetLink.getBoundingClientRect();
+    if (!navRect.width || !linkRect.width) return;
+
+    const x = linkRect.left - navRect.left;
+    const width = linkRect.width;
+
+    if (gsapRef && !instant) {
+      gsapRef.to(navIndicator, {
+        x: x,
+        width: width,
+        duration: 0.34,
+        ease: 'power3.out',
+        overwrite: 'auto',
+      });
+      return;
+    }
+
+    navIndicator.style.transform = 'translateX(' + x + 'px)';
+    navIndicator.style.width = width + 'px';
+  }
+
+  if (nav && navLinks.length) {
+    navIndicator = nav.querySelector('.nav-indicator');
+    if (!navIndicator) {
+      navIndicator = document.createElement('span');
+      navIndicator.className = 'nav-indicator';
+      navIndicator.setAttribute('aria-hidden', 'true');
+      nav.appendChild(navIndicator);
+    }
+  }
 
   function setNavState(open) {
     if (!nav || !navToggle) return;
@@ -12,6 +51,11 @@ function initSite() {
     if (icon) {
       icon.classList.toggle('bx-x', open);
       icon.classList.toggle('bx-menu', !open);
+    }
+    if (open && lastActiveLink) {
+      window.requestAnimationFrame(function () {
+        moveNavIndicator(lastActiveLink, true);
+      });
     }
   }
 
@@ -38,6 +82,81 @@ function initSite() {
       setNavState(false);
     });
   });
+
+  function setCurrentLink(sectionId, options) {
+    let activeLink = null;
+    navLinks.forEach(function (link) {
+      const href = link.getAttribute('href') || '';
+      const isCurrent = href === '#' + sectionId;
+      link.classList.toggle('is-current', isCurrent);
+      if (isCurrent) {
+        activeLink = link;
+      }
+    });
+
+    if (!activeLink && navLinks.length) {
+      activeLink = navLinks[0];
+      activeLink.classList.add('is-current');
+    }
+
+    if (!activeLink) return;
+    lastActiveLink = activeLink;
+    moveNavIndicator(activeLink, options && options.instant);
+  }
+
+  navLinks.forEach(function (link) {
+    const targetSelector = link.getAttribute('href');
+    if (!targetSelector || targetSelector === '#') return;
+    const section = document.querySelector(targetSelector);
+    if (!section) return;
+    observedSections.push(section);
+  });
+
+  if (navLinks.length) {
+    navLinks.forEach(function (link) {
+      link.addEventListener('pointerenter', function () {
+        moveNavIndicator(link, false);
+      });
+      link.addEventListener('pointerleave', function () {
+        if (lastActiveLink) {
+          moveNavIndicator(lastActiveLink, false);
+        }
+      });
+    });
+
+    window.addEventListener('resize', function () {
+      if (lastActiveLink) {
+        moveNavIndicator(lastActiveLink, true);
+      }
+    });
+  }
+
+  if (observedSections.length) {
+    setCurrentLink(observedSections[0].id, { instant: true });
+    if ('IntersectionObserver' in window) {
+      const sectionObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            setCurrentLink(entry.target.id);
+          });
+        },
+        {
+          threshold: 0.35,
+          rootMargin: '-20% 0px -45% 0px',
+        }
+      );
+
+      observedSections.forEach(function (section) {
+        sectionObserver.observe(section);
+      });
+    }
+  } else if (navLinks.length) {
+    const firstSectionId = (navLinks[0].getAttribute('href') || '#').replace('#', '');
+    if (firstSectionId) {
+      setCurrentLink(firstSectionId, { instant: true });
+    }
+  }
 
   document.querySelectorAll('[data-toggle]').forEach(function (button) {
     const targetId = button.dataset.toggle;
@@ -160,4 +279,3 @@ if (document.readyState === 'loading') {
 } else {
   initSite();
 }
-
