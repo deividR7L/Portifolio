@@ -3,260 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfólio profissional de Deivid Rodrigues, desenvolvedor web e mobile focado em soluções modernas e responsivas.">
-  <title>Deivid Rodrigues | Portfólio</title>
+  <meta name="description" content="Portfólio de Deivid Rodrigues, analista de dados com foco em Power BI, Excel e indicadores de negócio.">
+  <title>Deivid Rodrigues | Dados que orientam decisões</title>
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="img/perfil.png" type="image/png">
   <link rel="stylesheet" href="CSS/style.css">
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 </head>
 <body>
   <div class="scroll-progress" aria-hidden="true"></div>
-  <canvas id="stars-bg" aria-hidden="true"></canvas>
   <div class="page-shell">
     <header class="topbar">
-      <a class="brand" href="#menu">
-        <span class="brand__name">Deivid</span>
-        <span class="brand__title">Rodrigues</span>
-      </a>
-      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="nav" aria-expanded="false">
-        <i class="bx bx-menu"></i>
-      </button>
-      <nav class="nav" id="nav" aria-label="Serviços e seções">
-        <a href="#menu">Início</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#portifolio">Projetos</a>
-        <a href="#skills">Skills</a>
-        <a href="#contato">Contato</a>
-        <a href="#sobre">Sobre</a>
-      </nav>
+      <a class="brand" href="#inicio" aria-label="Deivid Rodrigues, início"><span class="brand__mark">DR</span><span><strong>Deivid Rodrigues</strong><small>Dados & negócios</small></span></a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="nav" aria-expanded="false"><i class="bx bx-menu"></i></button>
+      <nav class="nav" id="nav" aria-label="Navegação principal"><a href="#inicio">Início</a><a href="#projetos">Projetos</a><a href="#processo">Como trabalho</a><a href="#sobre">Sobre</a><a class="nav-contact" href="#contato">Vamos conversar <i class="bx bx-arrow-up-right"></i></a></nav>
     </header>
 
     <main>
-      <section class="hero reveal" id="menu">
-        <div class="hero__fx" aria-hidden="true">
-          <span class="hero-glow hero-glow--one"></span>
-          <span class="hero-glow hero-glow--two"></span>
-          <span class="hero-grain"></span>
-        </div>
-        <div class="hero__content">
-          <span class="eyebrow">Desenvolvedor full-stack</span>
-          <p class="hero__signal"><span></span>Disponível para estágio e projetos sob demanda</p>
-          <h1>
-            <span class="hero-line">Olá, sou <strong>Deivid Rodrigues</strong>,</span>
-            <span class="hero-line hero-line--accent">união entre design e lógica</span>
-          </h1>
-          <p>
-            Estudante do curso de Análise e Desenvolvimento de Sistemas, especializado em desenvolvimento mobile com Swift e referências sólidas em HTML/CSS/JavaScript.
-            Crio experiências digitais com foco em clareza, performance e acessibilidade, ajudando empresas a comunicar seus diferenciais com confiança.
-          </p>
-          <div class="hero__actions">
-            <a class="cta" href="#contato">Agendar conversa</a>
-            <a class="ghost" href="Curriculum_Deivid_Rodrigues.pdf" download>Baixar currículo</a>
-          </div>
-          <div class="hero__stats">
-            <article>
-              <span class="value">+6</span>
-              <p>Projetos entregues</p>
-            </article>
-            <article>
-              <span class="value">Swift • Web</span>
-              <p>Especialidades principais</p>
-            </article>
-            <article>
-              <span class="value">UNIFEMM</span>
-              <p>Cursando ADS (2026)</p>
-            </article>
-          </div>
-        </div>
-        <div class="hero__stage">
-          <div class="hero__rings" aria-hidden="true">
-            <span class="ring ring--outer"></span>
-            <span class="ring ring--middle"></span>
-            <span class="ring ring--inner"></span>
-            <span class="orbit orbit--one"></span>
-            <span class="orbit orbit--two"></span>
-          </div>
-          <div class="hero__badge">
-            <p>Estou disponível para estágio e parcerias.</p>
-            <a class="badge-link" href="mailto:davimelgasso7l@icloud.com">Contato rápido</a>
-          </div>
-        </div>
+      <section class="hero reveal" id="inicio">
+        <div class="hero-copy"><h1>Eu organizo dados para você <em>enxergar melhor.</em></h1><p class="hero-intro">Sou Deivid, estudante de ADS e estou construindo minha experiência em análise de dados. Gosto de entender o problema, arrumar a base e transformar informação espalhada em um painel fácil de acompanhar.</p><div class="hero-actions"><a class="button button--primary" href="#projetos">Ver projetos <i class="bx bx-right-arrow-alt"></i></a><a class="text-link" href="Curriculum_Deivid_Rodrigues.pdf" download>Baixar currículo <i class="bx bx-download"></i></a></div><div class="hero-note"><span>Atualmente</span> cursando Análise e Desenvolvimento de Sistemas na UNIFEMM</div></div>
+        <div class="dashboard-preview" aria-label="Exemplo visual de um painel de vendas"><div class="preview-top"><span>visão geral / vendas</span><span class="preview-period">jan — jun 2026</span></div><div class="preview-kpis"><div><small>Receita</small><strong>R$ 84,2k</strong><span class="up">+18,4%</span></div><div><small>Pedidos</small><strong>1.284</strong><span class="up">+9,2%</span></div></div><div class="chart-area"><div class="chart-labels"><span>24k</span><span>16k</span><span>8k</span><span>0</span></div><div class="chart-bars" aria-hidden="true"><i style="height:42%"></i><i style="height:58%"></i><i style="height:51%"></i><i style="height:73%"></i><i style="height:66%"></i><i class="highlight" style="height:91%"></i></div></div><div class="preview-bottom"><span>Receita por mês</span><span><b></b> realizado</span></div></div>
       </section>
+      <section class="proof-strip reveal" aria-label="Principais ferramentas"><span>Ferramentas do dia a dia</span><strong>Power BI</strong><strong>Excel</strong><strong>DAX</strong><strong>SQL</strong><strong>Power Query</strong></section>
 
-      <section class="services reveal" id="servicos">
-        <div class="section-heading">
-          <p class="eyebrow">Do conceito ao deploy</p>
-          <h2>Serviços com foco em resultados</h2>
-          <p>Combino estratégia digital e rigor técnico para construir sites, aplicativos e dashboards que ajudam marcas a crescer.</p>
-        </div>
-        <div class="services-grid">
-          <article class="service-card">
-            <i class="bx bx-code-alt"></i>
-            <h3>Desenvolvimento Web</h3>
-            <p>
-              Interfaces responsivas com HTML, CSS e JavaScript, integradas a APIs e otimizadas para performance e SEO.
-            </p>
-            <button class="btn-outline" data-toggle="descricao-1">Leia mais</button>
-            <p class="service-more" id="descricao-1">Projetos recentes incluem landing pages, sistemas internos e portais de conteúdo com foco em UX e acessibilidade.</p>
-          </article>
-          <article class="service-card">
-            <i class="bx bx-mobile-alt"></i>
-            <h3>Desenvolvimento Mobile</h3>
-            <p>
-              Aplicações iOS em Swift com boas práticas da Apple, integrações seguras, notificações e publicação na App Store.
-            </p>
-            <button class="btn-outline" data-toggle="descricao-2">Leia mais</button>
-            <p class="service-more" id="descricao-2">Tenho experiência em apps educacionais, de logística e produtividade. Utilizo UIKit/SwiftUI e mantenho testes simples para garantir estabilidade.</p>
-          </article>
-          <article class="service-card">
-            <i class="bx bxs-dashboard"></i>
-            <h3>Dashboards e dados</h3>
-            <p>
-              Painéis claros e interativos em Excel, Power BI e bibliotecas web, transformando dados em decisões acionáveis.
-            </p>
-            <button class="btn-outline" data-toggle="descricao-3">Leia mais</button>
-            <p class="service-more" id="descricao-3">Suporte clientes com métricas de vendas, finanças e operação. Crio filtros, gráficos e exportações que facilitam o dia a dia.</p>
-          </article>
-        </div>
-      </section>
+      <section class="projects reveal" id="projetos"><div class="section-heading"><p class="kicker">Projetos selecionados</p><h2>Menos enfeite. Mais contexto.</h2><p>Alguns estudos e projetos que mostram como penso a partir de uma pergunta de negócio.</p></div><div class="project-list">
+        <article class="project-card project-card--featured"><div class="project-visual sales-visual"><div class="visual-header"><span>PAINEL COMERCIAL</span><span>Q2 / 2026</span></div><div class="visual-number">R$ 84.240 <small>+18,4%</small></div><div class="mini-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="visual-footer"><span>Receita acumulada</span><span>Meta: R$ 78k</span></div></div><div class="project-info"><p class="project-type">Power BI / Comercial</p><h3>Acompanhamento de vendas</h3><p>Um painel para acompanhar receita, ticket médio e desempenho por vendedor sem depender de planilhas espalhadas.</p><a href="#contato" class="text-link">Conversar sobre o projeto <i class="bx bx-arrow-up-right"></i></a></div></article>
+        <article class="project-card"><div class="project-visual budget-visual"><div class="donut"><span>72%</span></div><div class="legend"><span><b class="yellow"></b> Realizado <strong>R$ 32k</strong></span><span><b class="blue"></b> Planejado <strong>R$ 44k</strong></span></div></div><div class="project-info"><p class="project-type">Excel / Financeiro</p><h3>Controle de orçamento</h3><p>Organização de despesas por centro de custo com visão simples do planejado contra o realizado.</p><a href="#contato" class="text-link">Ver abordagem <i class="bx bx-arrow-up-right"></i></a></div></article>
+        <article class="project-card"><div class="project-visual operations-visual"><div class="ops-row"><span>Logística</span><b>92%</b></div><div class="ops-bar"><i style="width:92%"></i></div><div class="ops-row"><span>Atendimento</span><b>78%</b></div><div class="ops-bar"><i style="width:78%"></i></div><div class="ops-row"><span>Estoque</span><b>64%</b></div><div class="ops-bar"><i style="width:64%"></i></div></div><div class="project-info"><p class="project-type">Power BI / Operação</p><h3>Indicadores operacionais</h3><p>Uma leitura rápida dos gargalos da operação para apoiar as conversas semanais do time.</p><a href="#contato" class="text-link">Ver abordagem <i class="bx bx-arrow-up-right"></i></a></div></article>
+      </div></section>
 
-      <section class="portfolio reveal" id="portifolio">
-        <div class="section-heading">
-          <p class="eyebrow">Trabalho em destaque</p>
-          <h2>Portfólio selecionado</h2>
-        </div>
-        <div class="portfolio-grid">
-          <article class="portfolio-card">
-            <div class="portfolio-card__media" style="background-image:url('img/perfil.png')"></div>
-            <div class="portfolio-card__details">
-              <p class="badge">Web App</p>
-              <h3>Plataforma de agendamento</h3>
-              <p>Gestão de reservas e notificações em tempo real para um serviço local.</p>
-              <a href="#" aria-label="Visualizar projeto">Ver detalhes <i class="bx bx-chevron-right"></i></a>
-            </div>
-          </article>
-          <article class="portfolio-card">
-            <div class="portfolio-card__media" style="background-image:url('img/perfil.png')"></div>
-            <div class="portfolio-card__details">
-              <p class="badge">iOS</p>
-              <h3>Aplicativo educacional</h3>
-              <p>Conteúdo interativo e notificações para alunos em diferentes ciclos.</p>
-              <a href="#" aria-label="Visualizar projeto">Ver detalhes <i class="bx bx-chevron-right"></i></a>
-            </div>
-          </article>
-          <article class="portfolio-card">
-            <div class="portfolio-card__media" style="background-image:url('img/perfil.png')"></div>
-            <div class="portfolio-card__details">
-              <p class="badge">Dashboard</p>
-              <h3>Controladoria em Excel</h3>
-              <p>Automatização de indicadores de vendas e forecast para equipes comerciais.</p>
-              <a href="#" aria-label="Visualizar projeto">Ver detalhes <i class="bx bx-chevron-right"></i></a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="skills reveal" id="skills">
-        <div class="section-heading">
-          <p class="eyebrow">Ferramentas dominadas</p>
-          <h2>Habilidades e certificações</h2>
-        </div>
-        <div class="skills-grid">
-          <article>
-            <h3>Técnicas</h3>
-            <ul>
-              <li>Swift / SwiftUI / UIKit</li>
-              <li>HTML, CSS, JavaScript moderno</li>
-              <li>Git, GitHub e fluxo colaborativo</li>
-              <li>Figma e prototipação</li>
-              <li>Excel, Power BI e análise de dados</li>
-            </ul>
-          </article>
-          <article>
-            <h3>Certificações</h3>
-            <ul>
-              <li>Formaçao TIC Mobile (em andamento)</li>
-              <li>Swift para iOS - Fundação Bradesco</li>
-              <li>HTML/CSS - Curso em Vídeo</li>
-              <li>JavaScript Essencial - Udemy</li>
-              <li>Power BI Completo - Fundação Bradesco</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="contact reveal" id="contato">
-        <div class="section-heading">
-          <p class="eyebrow">Vamos conversar</p>
-          <h2>Contato</h2>
-          <p>Envie uma mensagem ou agende um horário para discutir projetos e oportunidades.</p>
-        </div>
-        <div class="contact-grid">
-          <form
-            class="contact-form"
-            name="contato"
-            method="POST"
-            accept-charset="UTF-8"
-            action="/api/contact"
-          >
-            <p hidden>
-              <label>
-                Nao preencha este campo:
-                <input name="bot-field">
-              </label>
-            </p>
-            <label>
-              <span>Nome</span>
-              <input type="text" name="nome" placeholder="Seu nome completo" maxlength="100" autocomplete="name" required>
-            </label>
-            <label>
-              <span>E-mail</span>
-              <input type="email" name="email" placeholder="seu@email.com" maxlength="180" autocomplete="email" required>
-            </label>
-            <label>
-              <span>Telefone</span>
-              <input type="tel" name="telefone" placeholder="(xx) xxxx-xxxx" maxlength="60" autocomplete="tel">
-            </label>
-            <label>
-              <span>Mensagem</span>
-              <textarea name="mensagem" rows="5" placeholder="Conte-me sobre sua ideia" maxlength="2500" required></textarea>
-            </label>
-            <button class="cta" type="submit">Enviar mensagem</button>
-          </form>
-          <div class="contact-card">
-            <h3>Informações rápidas</h3>
-            <p><strong>E-mail:</strong> <a href="mailto:davimelgasso7l@icloud.com">davimelgasso7l@icloud.com</a></p>
-            <p><strong>Disponibilidade:</strong> Estágio & projetos freelance</p>
-            <p><strong>Localização:</strong> Minas Gerais • Brasil</p>
-            <p class="micro">Respondo em até 24 horas úteis.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="about reveal" id="sobre">
-        <div class="about-content">
-          <h2>Sobre mim</h2>
-          <p>Trabalho com curiosidade e disciplina. Busco sempre alinhar objetivos de negócio com experiências humanas, entregando código limpo e documentação clara.</p>
-          <p>Sou proativo, comprometido com prazos e gosto de evoluir por meio de feedback. Atualmente me preparo para mergulhar em times que valorizem inovação e colaboração.</p>
-          <div class="about-actions">
-            <a href="#servicos" class="ghost">Ver serviços</a>
-            <a href="#portifolio" class="ghost">Ver projetos</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <p>&copy; 2026 Deivid Rodrigues. Todos os direitos reservados.</p>
-      <p>Feito com atenção a cada detalhe.</p>
-    </footer>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="js/script.js"></script>
-  <script src="js/gsapAnimations.js"></script>
-  <script src="js/estrelas.js"></script>
-</body>
-</html>
+      <section class="process reveal" id="processo"><div class="section-heading"><p class="kicker">Como trabalho</p><h2>Clareza antes do gráfico.</h2></div><div class="process-grid"><article><span>01</span><h3>Entender a pergunta</h3><p>Antes de abrir o Power BI, alinho o que precisa ser decidido e qual indicador realmente ajuda.</p></article><article><span>02</span><h3>Tratar a base</h3><p>Limpo, organizo e documento os dados com Power Query, evitando que o relatório esconda problemas.</p></article><article><span>03</span><h3>Contar a história</h3><p>Escolho visuais objetivos e entrego uma leitura que faça sentido para quem vai usar o painel.</p></article></div></section>
+      <section class="about reveal" id="sobre"><div class="about-copy"><p class="kicker">Um pouco sobre mim</p><h2>Gosto de descobrir o que os dados estão tentando dizer.</h2><p>Minha entrada na área de tecnologia começou pelo desenvolvimento, mas foi na análise que encontrei meu lugar. Tenho curiosidade por processos, atenção aos detalhes e prazer em deixar uma informação confusa mais fácil de enxergar.</p><p>Estou construindo minha experiência com Power BI, Excel, DAX e fundamentos de SQL, sempre buscando unir técnica com uma comunicação simples.</p></div><div class="about-aside"><span class="aside-number">06</span><p>projetos e estudos práticos reunidos neste portfólio</p><a class="text-link" href="Curriculum_Deivid_Rodrigues.pdf" download>Conhecer minha trajetória <i class="bx bx-download"></i></a></div></section>
+      <section class="contact reveal" id="contato"><div class="contact-heading"><p class="kicker">Tem uma pergunta de negócio?</p><h2>Vamos colocar os dados para trabalhar.</h2><p>Se você precisa organizar uma base, criar um indicador ou tirar um painel do papel, me conte um pouco.</p><a class="email-link" href="mailto:davimelgasso7l@icloud.com">davimelgasso7l@icloud.com <i class="bx bx-arrow-up-right"></i></a></div><form class="contact-form" name="contato" method="POST" accept-charset="UTF-8" action="/api/contact"><p hidden><label>Não preencha este campo:<input name="bot-field"></label></p><label><span>Seu nome</span><input type="text" name="nome" placeholder="Como posso te chamar?" maxlength="100" autocomplete="name" required></label><label><span>E-mail</span><input type="email" name="email" placeholder="voce@empresa.com" maxlength="180" autocomplete="email" required></label><label><span>O que você precisa?</span><textarea name="mensagem" rows="4" placeholder="Conte brevemente sobre a base, o relatório ou o desafio" maxlength="2500" required></textarea></label><button class="button button--primary" type="submit">Enviar mensagem <i class="bx bx-send"></i></button></form></section>
++    </main>
++    <footer><p>© 2026 Deivid Rodrigues</p><p>Feito com dados, curiosidade e café.</p></footer>
++  </div>
++  <script src="js/script.js"></script>
++</body>
++</html>
